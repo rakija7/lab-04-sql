@@ -1,0 +1,7 @@
+post_id	user_id	message	likes	created_at	user_id	username	email	age
+2	1	Went hiking up the trail near the lake.	12	2024-01-08 15:30:00	1	alice99	alice99@example.com	22
+5	3	Homemade pasta is easier than you think.	20	2024-01-13 12:00:00	3	carla_j	carla.j@example.com	28
+7	5	How I edit my landscape photos.	15	2024-02-16 08:50:00	5	elena_r	elena.r@example.com	19
+8	6	Ran 15 miles this weekend, feeling great.	10	2024-02-22 07:30:00	6	frank_o	frank.o@example.com	37
+11	9	Tomatoes are finally coming in the garden.	9	2024-03-19 14:40:00	9	isla_p	isla.p@example.com	23
+12	10	Sourdough starter progress report.	11	2024-04-03 09:25:00	10	jack_w	jack.w@example.com	45

@@ -33,9 +33,10 @@ def get_data_by_group(value):
 		output = []
 		for r in results:
 			output.append(r)
+		logger.info("Fetched %d rows for group '%s'", len(output), value)
 		return output
 	except mysql.connector.Error as e:
-		print("MySQL Error: ", str(e))
+		logger.exception("Query failed for group '%s'", value)
 		return None
 
 def plot_counts(groupby):
@@ -51,16 +52,17 @@ def plot_counts(groupby):
 		df.plot.bar(x=0, y=1)
 		plt.tight_layout()
 		plt.show()
+		logger.info("Plotted counts for column '%s'", groupby)
 		return df
 	except mysql.connector.Error as e:
-		print("MySQL Error: ", str(e))
+		logger.exception("Query failed for column '%s'", groupby)
 		return None
 
 def main():
 	'''run the previous two functions, and close the database connection'''
-	print('Output # of row by group name:')
+	logger.info("Output # of row by group name:")
 	print(get_data_by_group("video"))
-	print('Output plot of counts by group name:')
+	logger.info("Output plot of counts by group name:")
 	plot_counts("group_name")
 	cur.close()
 	db.close()
